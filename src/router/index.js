@@ -1,10 +1,12 @@
 import { createWebHistory, createRouter } from 'vue-router'
 
 import Home from '../components/Home.vue'
+import WorkSpace from '@/components/WorkSpace.vue';
 
 const routes = [
   { path: '/', redirect: '/home'},
   { path: '/home', component: Home },
+  { path: '/workspace', component: WorkSpace},
 ];
 
 const router = createRouter({

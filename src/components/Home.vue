@@ -2,6 +2,8 @@
 import { ref } from 'vue'
 import Modal from './Modal.vue'
 
+
+
 const isModalOpen = ref(0)
 const modalType = ref(0)
 const openModal = (type) => {
@@ -45,9 +47,11 @@ const handleScroll = (event) => {
               登录
             </button>
 
-            <button class="button-group" id="help-button">
-              用户指南
-            </button>
+            <a href="/static/userGuide.pdf" target="_blank">
+              <button class="button-group" id="help-button">
+                用户指南
+              </button>
+            </a>
           </div>
         </div>
         
@@ -285,8 +289,8 @@ p {
 }
 
 .circle-image {
-  width: calc(max(27vw, 30vh));
-  height: calc(max(27vw, 30vh));
+  width: calc(min(25vw, 50vh));
+  height: calc(min(25vw, 50vh));
   border-radius: 50%; /* 将图像变成圆形 */
   background-size: cover;
   margin-left: -5vw; /* 重叠一点 */
